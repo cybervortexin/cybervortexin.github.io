@@ -1,0 +1,100 @@
+
+body {
+  
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-family: Arial, sans-serif;
+    color: #674ed3;
+    font-weight: bold;
+  }
+  
+  form {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Black+Ops+One&family=Titillium+Web:wght@400;700&display=swap');
+  #captchaText {
+    font-family: 'Black Ops One', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transform: skewX(-10deg);
+    user-select: none; /* Disable text selection */
+    pointer-events: none; /* Disable cursor interaction */
+    -webkit-touch-callout: none; /* Disable iOS text selection */
+    -webkit-user-select: none; /* Disable iOS text selection */
+    -khtml-user-select: none; /* Disable KDE text selection */
+    -moz-user-select: none; /* Disable Firefox text selection */
+    -ms-user-select: none; /* Disable IE/Edge text selection */
+  }
+  
+  #captchaText span {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  #captchaText span.dash {
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #666;
+  }
+
+  #captchaText span.distorted {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 5px;
+    transform: skewX(-10000deg) scale(2.5, 2.2);
+    position: relative;
+  }
+
+  #captchaText span.distorted::before {
+    content: "~";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: normal;
+    color: #000;
+  }
+
+  #ipAddress {
+    color: #674ed3;
+  }

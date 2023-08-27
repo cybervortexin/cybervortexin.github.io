@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function showIPAddress() {
+      fetch('https://api.ipify.org/?format=json')
+        .then(response => response.json())
+        .then(data => {
+          const ipAddress = data.ip;
+          const ipAddressElement = document.getElementById("ipAddress");
+          ipAddressElement.textContent = "Your IP address is: " + ipAddress;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+  </script>
+  <title>CyberVortex Captcha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showIPAddress()">
+  <h1>CyberVortex Captcha</h1><br>
+  <form>
+    <label for="captcha">Enter the CAPTCHA code:</label>
+    <input type="text" id="captcha" name="captcha">
+    
+    <span id="captchaText" class="distorted"></span>
+    <button type="submit">Submit</button>
+    <p id="ipAddress"></p>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
